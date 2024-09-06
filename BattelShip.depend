@@ -1,0 +1,93 @@
+# depslib dependency file v1.0
+1725617817 source:d:\battelship\buff_clr.c
+	"buff_clr.h"
+	<stdio.h>
+
+1725617843 d:\battelship\buff_clr.h
+
+1725617724 source:d:\battelship\clearmessage.c
+	"clearMessage.h"
+	"gotoXY.h"
+	<stdio.h>
+
+1725617749 d:\battelship\clearmessage.h
+
+1725617113 d:\battelship\gotoxy.h
+
+1725617638 source:d:\battelship\design.c
+	"design.h"
+	"utils.h"
+	"gotoXY.h"
+	<stdio.h>
+
+1725617670 d:\battelship\design.h
+
+1725617356 d:\battelship\utils.h
+
+1725617164 source:d:\battelship\dossierjeu.c
+	<stdio.h>
+	"dossierjeu.h"
+
+1725617218 d:\battelship\dossierjeu.h
+
+1725617089 source:d:\battelship\gotoxy.c
+	<windows.h>
+	"gotoXY.h"
+
+1725617418 source:d:\battelship\grill.c
+	"grill.h"
+	"utils.h"
+	<stdio.h>
+
+1725617449 d:\battelship\grill.h
+
+1725617275 source:d:\battelship\utils.c
+	<windows.h>
+	"utils.h"
+
+1725618015 source:d:\battelship\game_data.c
+	"game_data.h"
+
+1725617976 d:\battelship\game_data.h
+
+1725618085 source:d:\battelship\fillingmap.c
+	"fillingmap.h"
+	"game_data.h"
+	<stdlib.h>
+	<time.h>
+
+1725618110 d:\battelship\fillingmap.h
+
+1725619050 source:d:\battelship\targetships.c
+	"targetships.h"
+	"game_data.h"
+	<stdio.h>
+
+1725618153 d:\battelship\targetships.h
+
+1725619087 source:d:\battelship\touchsink.c
+	"touchsink.h"
+	"game_data.h"
+	<stdio.h>
+
+1725618258 d:\battelship\touchsink.h
+
+1725653148 source:d:\battelship\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+	"fillingmap.h"
+	"design.h"
+	"touchsink.h"
+	"targetships.h"
+	"gotoXY.h"
+	"grill.h"
+	"dossierjeu.h"
+	"clearMessage.h"
+	"utils.h"
+	"game_data.h"
+	"console_utils.h"
+
+1725618485 d:\battelship\console_utils.h
+

@@ -1,0 +1,4 @@
+Nom du joueur : Gauthier
+Nombre de cibles touchées : 5
+Statut : Perdu
+----------------------------
