@@ -1,4 +1,4 @@
-NB: Extraire les fichier .c et .h et méttez les dans le même emplacement que le fichier .cbp
+NB: Extraire les fichiers .c et .h et méttez les dans le même emplacement que le fichier .cbp
 
 Battleship Game
 
