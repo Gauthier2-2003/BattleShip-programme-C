@@ -5,25 +5,25 @@ void DossierJeu(int cibles, int vict, char Nom[20])
 {
     FILE* fichier; // Initialisation de la variable fichier de type FILE
 
-    // Ouverture du fichier en mode ajout (append) pour ne pas écraser les données existantes
+    // Ouverture du fichier en mode ajout (append) pour ne pas Ã©craser les donnÃ©es existantes
     fichier = fopen("Battleships.txt", "a");
 
-    // Vérification si l'ouverture du fichier a échoué
+    // VÃ©rification si l'ouverture du fichier a Ã©chouÃ©
     if(fichier == NULL)
     {
         printf("Erreur lors de l'ouverture du fichier !\n");
         return; // Sortie de la fonction en cas d'erreur
     }
 
-    // Écriture des données dans le fichier
+    // Ã‰criture des donnÃ©es dans le fichier
     fprintf(fichier, "Nom du joueur : %s\n", Nom);
-    fprintf(fichier, "Nombre de cibles touchées : %d\n", cibles);
-    fprintf(fichier, "Statut : %s\n", vict == 1 ? "Gagné" : "Perdu");
-    fputs("----------------------------\n", fichier);  // Séparateur pour les différentes parties du jeu
+    fprintf(fichier, "Nombre de cibles touchÃ©es : %d\n", cibles);
+    fprintf(fichier, "Statut : %s\n", vict == 1 ? "GagnÃ©" : "Perdu");
+    fputs("----------------------------\n", fichier);  // SÃ©parateur pour les diffÃ©rentes parties du jeu
 
     // Fermeture du fichier
     fclose(fichier);
 
-    // Confirmation de l'enregistrement des données
-    printf("Les résultats ont été enregistrés dans le fichier.\n");
+    // Confirmation de l'enregistrement des donnÃ©es
+    printf("Les resultats ont ete enregistres dans le fichier.\n");
 }
