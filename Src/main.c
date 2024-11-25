@@ -1,6 +1,6 @@
 /*Projet 3A, jeu Bataille navale
-Ecole Nationale SupÈrieur des IngÈnieurs du Mans (ENSIM)
-codÈ par DJOUMA Aubin Gauthier*/
+Ecole Nationale Sup√©rieur des Ing√©nieurs du Mans (ENSIM)
+cod√© par DJOUMA Aubin Gauthier*/
 
 
 
@@ -23,7 +23,7 @@ codÈ par DJOUMA Aubin Gauthier*/
 
 int main()
 {
-    // DÈclaration des variables
+    // D√©claration des variables
     int y = 0;
     char x;
     int nb_boulets = 25, nb_cibles = 0; // Initialisation du nombre de boulets et de cibles
@@ -50,9 +50,15 @@ int main()
     }
 
     // Saisie du nom du joueur
+    gotoXY(0, 2);
     printf("Entrer votre nom : ");
+    gotoXY(0, 10);
+    printf("La map du jeu bataille navale est compose de :\n\n\tUne grille de jeu numerotee de 1 a 10 horizontalement et de A √† J verticalement\n\t1 porte avion (5 cases)\n\t1 croiseur (4 cases)\n\t1 contre torpilleur (3 cases)\n\t1 sous-marin (3 cases)\n\t1 torpilleur (2 cases)\n\nCommencer la partie de bataille navale :\n\n\tAu debut du jeu, les bateaux sont disposes de fa√ßon aleatoire dans la grille. \n\tLe but etant de compliquer au maximum la tache au joueur, le joueur ne voit \n\tpas les bateaux dipose dans la grille.\n\tLe joueur dispose de 25 coups pour detruire tous les bateaux.Exemple le jou-\n\teur entre H7 correspondant a la case au croisement de la lettre H et du numero 7 sur les c√¥tes  des grilles.\n\tSi le joueur tire sur un navire ennemi, la case est peint en noir sinon en rouge.\n\tSi le joueur entre 2 (ou plus) fois la meme coordonnee au cours de la partie le tir ne sera pas comptabilise. \n\nComment gagner la partie de bataille navale\n\tUne partie de bataille navale se termine lorsque le joueur n‚Äôa plus de tir ou si tous les navirs sont navires.\n");
+    gotoXY(20, 0);
     gets(Nom);
-    system("cls"); // Nettoyage de l'Ècran
+
+    gotoXY(1, 20);
+    system("cls"); // Nettoyage de l'√©cran
     gotoXY(35, 1);
     color(1, 0); // Couleur du texte en bleu et fond en noir
     printf("BATAILLE NAVALE");
@@ -82,14 +88,14 @@ int main()
             colonne = y - 1;
             fflush(stdin);
 
-            /*/ VÈrification si les coordonnÈes sont valides
+            /*/ V√©rification si les coordonn√©es sont valides
             if (ligne < 0 || ligne >= 10 || colonne < 0 || colonne >= 10) {
-                printf("CoordonnÈes invalides, essayez ‡ nouveau.\n");
+                printf("Coordonn√©es invalides, essayez √† nouveau.\n");
                 clearMessage();
                 continue;
             }
             if (coups_deja_joues[ligne][colonne] == 1) {
-                printf("Vous avez dÈj‡ tirÈ sur cette case. Rejouez.\n");
+                printf("Vous avez d√©j√† tir√© sur cette case. Rejouez.\n");
                 getchar();
                 clearMessage();
                 continue;
@@ -101,25 +107,25 @@ int main()
         test_col = y;*/
 
         k = x; // Transformation de x en entier pour effectuer le test
-        k = k - 65; // Conversion du caractËre en indice
+        k = k - 65; // Conversion du caract√®re en indice
 
-        // VÈrification des coordonnÈes
+        // V√©rification des coordonn√©es
         if(ligne < 10 && ligne >= 0 && colonne < 10 && colonne >= 0 && coups_deja_joues[ligne][colonne] != 1)
         {
-            nb_cibles = touchsink(ligne, colonne, nb_boulets, nb_cibles); // VÈrification si le tir touche un bateau
+            nb_cibles = touchsink(ligne, colonne, nb_boulets, nb_cibles); // V√©rification si le tir touche un bateau
             targetships(ligne, colonne); // Marquer le tir sur la carte
 
-            nb_boulets -= 1; // DÈcrÈmentation du nombre de boulets restants
+            nb_boulets -= 1; // D√©cr√©mentation du nombre de boulets restants
         }
 
         // Mark this position as played
         coups_deja_joues[ligne][colonne] = 1;
 
-    } while(nb_boulets != 0); // Continuer jusqu'‡ Èpuisement des boulets
+    } while(nb_boulets != 0); // Continuer jusqu'√† √©puisement des boulets
 
     gotoXY(70, 10);
 
-    // Affichage du rÈsultat du jeu
+    // Affichage du r√©sultat du jeu
     if(nb_cibles >= one)
     {
         vict = 1;
@@ -145,7 +151,7 @@ int main()
         }
     }
     gotoXY(1, 20);
-    DossierJeu(nb_cibles, vict, Nom); // Enregistrement des rÈsultats dans un fichier
+    DossierJeu(nb_cibles, vict, Nom); // Enregistrement des r√©sultats dans un fichier
 
     return 0;
 }
